@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     @State private var stepText: String = ""
@@ -17,6 +18,7 @@ struct ContentView: View {
                         let current = stepText
                         submittedStep = ""
                         submittedStep = current
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     }
                 }
                 .padding()
