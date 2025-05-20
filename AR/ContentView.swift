@@ -1,11 +1,15 @@
 import SwiftUI
 import UIKit
-
+import RealityKit
+import ARKit
 struct ContentView: View {
     @State private var stepText: String = ""
     @State private var submittedStep: String = ""
 
     var body: some View {
+        /*
+        DetectionTestView()
+            .edgesIgnoringSafeArea(.all)*/
         ZStack {
             CookingARView(step: $submittedStep)
                 .edgesIgnoringSafeArea(.all)
